@@ -1,8 +1,34 @@
+/*
+Parameters: None
+Return Value: None
+Description: Initialize the humanScore and the computerScore. Takes the
+return value from playGame and checks the score a final time to decide
+who wins the game.
+*/
 function main() {
     let humanScore = 0;
     let computerScore = 0;
 
-    playGame(humanScore, computerScore);
+    finalScore = playGame(humanScore, computerScore);
+
+    humanScore = finalScore[0];
+    computerScore = finalScore[1];
+    if (humanScore === computerScore) {
+        console.log(`
+            The game is tied.
+            computerScore: ${computerScore}
+            humanScore: ${humanScore}`);
+    } else if (humanScore > computerScore) {
+        console.log(`
+            You won the game!
+            computerScore: ${computerScore}
+            humanScore: ${humanScore}`);
+    } else {
+        console.log(`
+            You lost the game!
+            computerScore: ${computerScore}
+            humanScore: ${humanScore}`);
+    };
 }
 
 /*
@@ -103,6 +129,7 @@ function playGame(humanScore, computerScore) {
             computerScore: ${computerScore}
             humanScore: ${humanScore}`);
     }
+    return [humanScore, computerScore];
 }
 
 main()
