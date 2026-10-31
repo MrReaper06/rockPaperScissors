@@ -11,13 +11,26 @@
 
 ## Table of Contents
 
+- [Getting Started](#getting-started)
 - [How to Play](#how-to-play)
 - [Rules](#rules)
 - [Project Structure](#project-structure)
 - [How It Works](#how-it-works)
 - [Roadmap](#roadmap)
 - [Technologies](#technologies)
-- [Getting Started](#getting-started)
+
+---
+
+## Getting Started
+
+No build tools or dependencies are required.
+
+```bash
+git clone https://github.com/MrReaper06/rockPaperScissors.git
+cd rockPaperScissors
+```
+
+Then open `index.html` in your browser.
 
 ---
 
@@ -106,16 +119,3 @@ The game logic lives in `javascript.js` and is split into small functions:
 
 - HTML5
 - JavaScript (ES6)
-
----
-
-## Getting Started
-
-No build tools or dependencies are required.
-
-```bash
-git clone https://github.com/MrReaper06/rockPaperScissors.git
-cd rockPaperScissors
-```
-
-Then open `index.html` in your browser.
