@@ -21,3 +21,18 @@ function getComputerChoice () {
     }
     return computerChoice;
 }
+
+/*
+Parameters: None
+Return Value: humanChoice - "Rock" | "Paper" | "Scissor"
+Description: Prompt the user for a choice and return the user's choice.
+*/
+function getHumanChoice() {
+    let humanChoice = prompt("Rock Paper Scissors", "Rock");
+    return humanChoice;
+}
+
+// test1 = getComputerChoice();
+// console.log(test);
+// test2 = getHumanChoice();
+// console.log(test2);
