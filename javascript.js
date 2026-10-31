@@ -1,22 +1,8 @@
-console.log("Hello World")
-
 function main() {
     let humanScore = 0;
     let computerScore = 0;
 
-    test1 = getComputerChoice();
-    // console.log(test);
-    test2 = getHumanChoice();
-    // console.log(test2);
-    score = playRound(test2, test1)
-    if (score === 0) {
-        computerScore += 1;
-    } else if (score === 1) {
-        humanScore += 1;
-    }
-    console.log(`
-        computerScore: ${computerScore}
-        humanScore: ${humanScore}`);
+    playGame(humanScore, computerScore);
 }
 
 /*
@@ -92,6 +78,31 @@ function playRound(humanChoice, computerChoice) {
         }
     }
 
+}
+
+/*
+Parameters: humanScore | computerScore
+Return Value: [humanScore, ComputerScore]
+Description: Loop for 5 times. In each loop, initialize a random computerChoice
+and prompt the user for the humanChoice. Call the playRound function,
+increment the score and the display the score to the console.
+*/
+function playGame(humanScore, computerScore) {
+    for (let i = 0; i < 5; i++) {
+        let computerChoice = getComputerChoice();
+        let humanChoice = getHumanChoice();
+        score = playRound(humanChoice, computerChoice);
+
+        if (score === 0) {
+            computerScore += 1;
+        } else if (score === 1) {
+            humanScore += 1;
+        }
+
+        console.log(`
+            computerScore: ${computerScore}
+            humanScore: ${humanScore}`);
+    }
 }
 
 main()
